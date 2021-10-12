@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>kakaotalk message template</title>
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ </head>
+ <body>
+  <a id="send_msgtpl" href="javascript:void(0);">메시지 템플릿 보내기(새창)</a>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+     Kakao.init('275946ced292571c0a01467b0326db08');
+     $("#send_msgtpl").click(function(e) {
+       e.preventDefault();
+       Kakao.Link.sendCustom({
+         templateId: 63351;
+  });
+ });
+  </script>
+ </body>
+</html>
